@@ -12,11 +12,7 @@ import "./App.css";
 import React from "react";
 
 // Module Federation - importing this from application 2
-const Banner = React.lazy(
-  () =>
-    // @ts-ignore
-    import("remote/Banner")
-);
+const Banner = React.lazy(() => import("remote/Banner") as any);
 
 function App() {
   return (
